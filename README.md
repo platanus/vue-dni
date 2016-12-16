@@ -6,7 +6,10 @@ This library is a collection of utilities that allows you to check if a RUT (Chi
 
 ```bash
 npm install vue-rut --save
+# or
+yarn add vue-rut
 ```
+
 
 ```javascript
 import { rutValidator, rutFilter, rutDirective } from 'vue-rut';
