@@ -42,12 +42,14 @@ export function rutFilter(value) {
 
 export const rutInputDirective = {
   bind() {
-    this.el.addEventListener('blur', (event) => {
-      event.target.value = rutFilter(event.target.value) || '';
+    const event = (this.arg === 'live') ? 'input' : 'blur';
+
+    this.el.addEventListener(event, (e) => {
+      e.target.value = rutFilter(e.target.value) || '';
     });
 
-    this.el.addEventListener('focus', (event) => {
-      event.target.value = cleanRut(event.target.value) || '';
+    this.el.addEventListener('focus', (e) => {
+      e.target.value = cleanRut(e.target.value) || '';
     });
   },
 };

@@ -65,9 +65,13 @@ and then do the render and filtering
 
 ### Directive
 
-If you want to format the user input in a text field use the included directive, it'll format the string on blur.
+If you want to format the user input in a text field use the included directive.
+By default it'll format the string on blur but it can be configured to format while
+the text is being written.
 
 ![Rut directive](http://i.imgur.com/s6eRYSF.gif)
+
+![Rut live directive](http://i.imgur.com/dCkXiXc.gif)
 
 ```javascript
 import Vue from 'vue';
@@ -79,5 +83,9 @@ Vue.directive('rut', rutDirective);
 And then in your template you can use it like this
 
 ```HTML
+<!-- Format on blur -->
 <input type="text" name="user[rut]" v-rut>
+
+<!-- Format live (while text is being written) -->
+<input type="text" name="user[rut]" v-rut:live>
 ```

@@ -49,12 +49,14 @@ function rutFilter(value) {
 
 var rutInputDirective = exports.rutInputDirective = {
   bind: function bind() {
-    this.el.addEventListener('blur', function (event) {
-      event.target.value = rutFilter(event.target.value) || '';
+    var event = this.arg === 'live' ? 'input' : 'blur';
+
+    this.el.addEventListener(event, function (e) {
+      e.target.value = rutFilter(e.target.value) || '';
     });
 
-    this.el.addEventListener('focus', function (event) {
-      event.target.value = cleanRut(event.target.value) || '';
+    this.el.addEventListener('focus', function (e) {
+      e.target.value = cleanRut(e.target.value) || '';
     });
   }
 };
