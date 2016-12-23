@@ -1,6 +1,6 @@
 {
   "name": "vue-rut",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Vue utility functions for validating and formatting Chilean RUTs",
   "main": "dist/vue-rut.js",
   "scripts": {
@@ -15,7 +15,10 @@
     "rut",
     "chile"
   ],
-  "author": "Platanus",
+  "author": "Guillermo Moreno <gmq@guillermomoreno.cl>",
+  "contributors": [
+    "Mario López <mariolopezlandes@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/platanus/vue-rut/issues"
@@ -26,5 +29,8 @@
     "babel-cli": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
     "uglify-js": "^2.7.4"
+  },
+  "dependencies": {
+    "rut-helpers": "git+https://github.com/platanus/rut-helpers.git"
   }
 }
