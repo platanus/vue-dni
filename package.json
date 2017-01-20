@@ -3,7 +3,13 @@
   "version": "0.0.3",
   "description": "Vue utility functions for validating and formatting Chilean RUTs",
   "main": "dist/vue-rut.js",
+  "files": [
+    "dist",
+    "README.md",
+    "yarn.lock"
+  ],
   "scripts": {
+    "test": "echo \"We should add tests\"",
     "build": "babel src -d dist && uglifyjs dist/vue-rut.js -o dist/vue-rut.min.js"
   },
   "repository": {
