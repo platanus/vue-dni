@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- '6'
+script:
+- yarn test
+cache: yarn
+before_deploy:
+- yarn build
+deploy:
+  provider: npm
+  email: contacto@platan.us
+  api_key:
+    secure: GEXylpnNA6krbbi2rnthUcFPxluGtkPBT8pO4ud14jxe8fod0Ls0H94qmNBix5HI4pB3El7Uppgk5luz0wlUW9HuasNqMjNbMlgU+AfX58GYtpIqVrvOW+4Mtl5yqEdZgnbO9nU+rtniuf7CI4P1oOCHq1vP69TzcxftWfXI6GJGn+yaRjlRmVlB7WBxDEJVC/CmAmArYy7m1Vm/21ZD8Wey2e6gxGiBKlZWv94QLL5xuMBgIZ2rfVryKAALLXsyHEipSfGm4K44nwOjS0dacZQONrNBvypjwxDrWuncG7HZLiz7AkK5Gbg/U+OcMW75RJkQ7vpJf+BCUU3ZJJ5aiR1c7EFkIqmdLZkbJ8igTmyMS/4iuGhE0vDoDwNQc3F2yskbP+RW+0cMiAV/33vDdU+hMQ9+L1BJpa/ugwtShANnd3YRhXr5Cn5S5RGrCyOECDItVXM4VfUMQfqK2s5eHEIV60A5Y9zZ58Y+NUkOh+BHyuLS75oVZp3ajWJ4j0TcJ3ga6FD8GkpKOco/Rvg4HVlVBJwovsE2A8eLxLH+Q6Ed5M9tDn4Gs4pCNH6B6jVY63KUQZ5AO1IlYepV/0xIITZvJXzpy+RyiS/7jGdiWxMvHtGlRMAnWlRmH1o/NKW3BOom1Jmq6oPu10yUoDJ9uicaPJvrPojq31nsGKdNVe0=
+  on:
+    tags: true
+    repo: platanus/vue-rut
