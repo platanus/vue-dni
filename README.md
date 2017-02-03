@@ -1,13 +1,17 @@
 # Vue Rut Validator
 
-This library is a collection of utilities that allows you to check if a RUT (Chilean DNI) is valid or not based on the verification digit (14.242.422-<b>2</b>), to format any string as a RUT, and to format the user-entered data in an input field.
+This library is a collection of utilities that allows you to check if a DNI is valid or not and to transform a string to the expected format.
+
+Supported DNIs:
+- Chilean (RUT)
+
 
 ## Installation
 
 ```bash
-npm install vue-rut --save
+npm install vue-dni --save
 # or
-yarn add vue-rut
+yarn add vue-dni
 ```
 
 
