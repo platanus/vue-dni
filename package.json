@@ -9,8 +9,8 @@
     "yarn.lock"
   ],
   "scripts": {
-    "test": "echo \"We should add tests\"",
-    "build": "babel src -d dist && uglifyjs dist/vue-rut.js -o dist/vue-rut.min.js"
+    "test": "karma start",
+    "build": "babel src/vue-rut.js -d dist --ignore '**/*.spec.js' && uglifyjs dist/vue-rut.js -o dist/vue-rut.min.js"
   },
   "repository": {
     "type": "git",
@@ -33,10 +33,22 @@
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.18.0",
+    "babel-loader": "^6.2.10",
     "babel-preset-latest": "^6.16.0",
-    "uglify-js": "^2.7.4"
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.4.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-webpack": "^2.0.2",
+    "phantomjs-prebuilt": "^2.1.14",
+    "uglify-js": "^2.7.4",
+    "webpack": "^2.2.1",
+    "vue": "^2.1.10"
   },
   "dependencies": {
-    "rut-helpers": "git+https://github.com/platanus/rut-helpers.git"
+    "rut-helpers": "^0.1.1"
+  },
+  "peerDependencies": {
+    "vue": "^2.1.10"
   }
 }

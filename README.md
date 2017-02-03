@@ -12,7 +12,7 @@ yarn add vue-rut
 
 
 ```javascript
-import { rutValidator, rutFilter, rutDirective } from 'vue-rut';
+import { rutValidator, rutFilter, rutInputDirective } from 'vue-rut';
 ```
 
 ## Usage
@@ -75,9 +75,9 @@ the text is being written.
 
 ```javascript
 import Vue from 'vue';
-import { rutDirective } from 'vue-rut';
+import { rutInputDirective } from 'vue-rut';
 
-Vue.directive('rut', rutDirective);
+Vue.directive('rut', rutInputDirective);
 ```
 
 And then in your template you can use it like this
