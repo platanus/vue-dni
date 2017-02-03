@@ -9,14 +9,14 @@ export function rutFilter(value) {
 }
 
 export const rutInputDirective = {
-  bind() {
-    const event = (this.arg === 'live') ? 'input' : 'blur';
+  bind(el, binding) {
+    const event = (binding.arg === 'live') ? 'input' : 'blur';
 
-    this.el.addEventListener(event, (e) => {
+    el.addEventListener(event, (e) => {
       e.target.value = rutHelpers.rutFormat(e.target.value) || '';
     });
 
-    this.el.addEventListener('focus', (e) => {
+    el.addEventListener('focus', (e) => {
       e.target.value = rutHelpers.rutClean(e.target.value) || '';
     });
   },
