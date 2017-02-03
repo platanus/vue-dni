@@ -61,9 +61,11 @@ describe('Rut Filter', () => {
   it('should format value', () => {
     vm = new Vue({
       template: '<div>{{superRut | rut}}</div>',
-      data: () => ({
-        superRut: '7618285K',
-      }),
+      data() {
+        return {
+          superRut: '7618285K',
+        };
+      },
     }).$mount();
 
     expect(vm.$el.textContent).toBe('7.618.285-K');
