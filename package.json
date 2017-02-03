@@ -1,6 +1,6 @@
 {
   "name": "vue-rut",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Vue utility functions for validating and formatting Chilean RUTs",
   "main": "dist/vue-rut.js",
   "files": [
