@@ -1,6 +1,9 @@
 {
   "env": {
-    "es6": true
+    "es6": true,
+    "jasmine": true,
+    "browser": true,
+    "node": true
   },
   "parserOptions": {
     "ecmaVersion": 6,
