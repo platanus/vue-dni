@@ -1,8 +1,8 @@
 {
-  "name": "vue-rut",
+  "name": "vue-dni",
   "version": "1.0.0",
-  "description": "Vue utility functions for validating and formatting Chilean RUTs",
-  "main": "dist/vue-rut.js",
+  "description": "Vue utility functions for validating and formatting DNIs",
+  "main": "dist/vue-dni.js",
   "files": [
     "dist",
     "README.md",
@@ -10,16 +10,17 @@
   ],
   "scripts": {
     "test": "karma start",
-    "build": "babel src/vue-rut.js -d dist --ignore '**/*.spec.js' && uglifyjs dist/vue-rut.js -o dist/vue-rut.min.js"
+    "build": "babel src -d dist --ignore '**/*.spec.js' && uglifyjs dist/vue-dni.js -o dist/vue-dni.min.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/platanus/vue-rut.git"
+    "url": "git+https://github.com/platanus/vue-dni.git"
   },
   "keywords": [
     "vue",
     "rut",
-    "chile"
+    "chile",
+    "dni"
   ],
   "author": "Guillermo Moreno <gmq@guillermomoreno.cl>",
   "contributors": [
@@ -27,9 +28,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/platanus/vue-rut/issues"
+    "url": "https://github.com/platanus/vue-dni/issues"
   },
-  "homepage": "https://github.com/platanus/vue-rut#readme",
+  "homepage": "https://github.com/platanus/vue-dni#readme",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.18.0",

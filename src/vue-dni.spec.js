@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { rutInputDirective, rutFilter } from './vue-rut';
+import { rutInputDirective, rutFilter } from './vue-dni';
 
 describe('Rut Input Directive', () => {
   let vm;
@@ -7,7 +7,7 @@ describe('Rut Input Directive', () => {
     Vue.directive('rut', rutInputDirective);
   });
 
-  it('should format on blur by default', () => {
+  it('should format RUT on blur by default', () => {
     vm = new Vue({
       template: '<div><input v-rut name="rut" type="text"></div>',
     }).$mount();
@@ -18,7 +18,7 @@ describe('Rut Input Directive', () => {
     expect(nativeInput.value).toBe('7.618.285-K');
   });
 
-  it('shouldn\'t format on keyup by default', () => {
+  it('shouldn\'t format RUT on keyup by default', () => {
     vm = new Vue({
       template: '<div><input v-rut name="rut" type="text"></div>',
     }).$mount();
@@ -29,7 +29,7 @@ describe('Rut Input Directive', () => {
     expect(nativeInput.value).toBe('7618285K');
   });
 
-  it('should format on keyup if in live mode', () => {
+  it('should format RUT on keyup if in live mode', () => {
     vm = new Vue({
       template: '<div><input v-rut:live name="rut" type="text"></div>',
     }).$mount();
@@ -40,7 +40,7 @@ describe('Rut Input Directive', () => {
     expect(nativeInput.value).toBe('7.618.285-K');
   });
 
-  it('should always format on blur even if in live mode', () => {
+  it('should always format RUT on blur even if in live mode', () => {
     vm = new Vue({
       template: '<div><input v-rut:live name="rut" type="text"></div>',
     }).$mount();
@@ -58,7 +58,7 @@ describe('Rut Filter', () => {
     Vue.filter('rut', rutFilter);
   });
 
-  it('should format value', () => {
+  it('should format value to Rut', () => {
     vm = new Vue({
       template: '<div>{{superRut | rut}}</div>',
       data() {
