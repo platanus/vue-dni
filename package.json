@@ -1,6 +1,6 @@
 {
   "name": "vue-dni",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue utility functions for validating and formatting DNIs",
   "main": "dist/vue-dni.js",
   "files": [
