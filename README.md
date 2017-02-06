@@ -1,4 +1,4 @@
-# Vue Rut Validator
+# Vue DNI Validator
 
 This library is a collection of utilities that allows you to check if a DNI is valid or not and to transform a string to the expected format.
 
@@ -16,7 +16,7 @@ yarn add vue-dni
 
 
 ```javascript
-import { rutValidator, rutFilter, rutInputDirective } from 'vue-rut';
+import { rutValidator, rutFilter, rutInputDirective } from 'vue-dni';
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ The validator checks the passed string and returns a boolean depending on the st
 
 ```javascript
 import Vue from 'vue';
-import { rutValidator } from 'vue-rut';
+import { rutValidator } from 'vue-dni';
 
 Vue.validator('rutValidator', rutValidator);
 
@@ -52,7 +52,7 @@ With the RUT filter you can format any string to appear as a RUT.
 
 ```javascript
 import Vue from 'vue';
-import { rutFilter } from 'vue-rut';
+import { rutFilter } from 'vue-dni';
 
 Vue.filter('rutFilter', rutFilter);
 ```
@@ -79,7 +79,7 @@ the text is being written.
 
 ```javascript
 import Vue from 'vue';
-import { rutInputDirective } from 'vue-rut';
+import { rutInputDirective } from 'vue-dni';
 
 Vue.directive('rut', rutInputDirective);
 ```
@@ -88,8 +88,8 @@ And then in your template you can use it like this
 
 ```HTML
 <!-- Format on blur -->
-<input type="text" name="user[rut]" v-rut>
+<input type="text" name="user[rut]" v-dni>
 
 <!-- Format live (while text is being written) -->
-<input type="text" name="user[rut]" v-rut:live>
+<input type="text" name="user[rut]" v-dni:live>
 ```
