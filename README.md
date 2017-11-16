@@ -88,8 +88,8 @@ And then in your template you can use it like this
 
 ```HTML
 <!-- Format on blur -->
-<input type="text" name="user[rut]" v-dni>
+<input type="text" name="user[rut]" v-rut>
 
 <!-- Format live (while text is being written) -->
-<input type="text" name="user[rut]" v-dni:live>
+<input type="text" name="user[rut]" v-rut:live>
 ```
