@@ -27,7 +27,7 @@ This library has three base features: a validator, a filter and a directive.
 The validator checks the passed string and returns a boolean depending on the string's validity as a RUT. We have tested it with [vue-validator](https://github.com/kazupon/vue-validator) and [vee-validate](http://vee-validate.logaretm.com/rules#custom-rules) but it should be usable by any library that uses booleans for validation.
 
 #### vue-validator Example
-[NOTE about vue-validator compatibility: official release for Vue.js 2.0 not yet](https://github.com/kazupon/vue-validator#ok-compatibility)
+[⚠️ ⚠️  Vue validator is deprecated and no longer being maintained ⚠️ ⚠️ ](https://github.com/kazupon/vue-validator#warning-please-note-this-project-is-deprecated-and-no-longer-being-maintained)
 ```javascript
 import Vue from 'vue';
 import { rutValidator } from 'vue-dni';
