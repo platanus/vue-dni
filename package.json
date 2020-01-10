@@ -35,13 +35,15 @@
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
+    "jest": "^24.9.0",
     "uglify-js": "^2.7.4",
-    "vue": "^2.1.10"
+    "vue": "^2.6.11",
+    "babel-jest": "^24.9.0"
   },
   "dependencies": {
     "rut-helpers": "^0.1.1"
   },
   "peerDependencies": {
-    "vue": "^2.1.10"
+    "vue": "^2.6.11"
   }
 }
