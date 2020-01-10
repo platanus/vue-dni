@@ -32,11 +32,9 @@
   },
   "homepage": "https://github.com/platanus/vue-dni#readme",
   "devDependencies": {
-    "babel": "^6.5.2",
-    "babel-cli": "^6.18.0",
-    "babel-loader": "^6.2.10",
-    "babel-preset-latest": "^6.16.0",
-    "jasmine-core": "^2.5.2",
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
     "uglify-js": "^2.7.4",
     "vue": "^2.1.10"
   },
