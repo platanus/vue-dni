@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import Vue from 'vue/dist/vue.common';
 import { rutInputDirective, rutFilter } from './vue-dni';
 
 describe('Rut Input Directive', () => {

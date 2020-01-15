@@ -9,7 +9,7 @@
     "yarn.lock"
   ],
   "scripts": {
-    "test": "karma start",
+    "test": "jest",
     "build": "babel src -d dist --ignore '**/*.spec.js' && uglifyjs dist/vue-dni.js -o dist/vue-dni.min.js"
   },
   "repository": {
@@ -32,24 +32,18 @@
   },
   "homepage": "https://github.com/platanus/vue-dni#readme",
   "devDependencies": {
-    "babel": "^6.5.2",
-    "babel-cli": "^6.18.0",
-    "babel-loader": "^6.2.10",
-    "babel-preset-latest": "^6.16.0",
-    "jasmine-core": "^2.5.2",
-    "karma": "^1.4.1",
-    "karma-jasmine": "^1.1.0",
-    "karma-phantomjs-launcher": "^1.0.2",
-    "karma-webpack": "^2.0.2",
-    "phantomjs-prebuilt": "^2.1.14",
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "jest": "^24.9.0",
     "uglify-js": "^2.7.4",
-    "webpack": "^2.2.1",
-    "vue": "^2.1.10"
+    "vue": "^2.6.11",
+    "babel-jest": "^24.9.0"
   },
   "dependencies": {
     "rut-helpers": "^0.1.1"
   },
   "peerDependencies": {
-    "vue": "^2.1.10"
+    "vue": "^2.6.11"
   }
 }
