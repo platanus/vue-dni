@@ -130,3 +130,13 @@ And then in your template you can use it like this
 <!-- Format live (while text is being written) -->
 <input type="text" name="user[rut]" v-rut:live>
 ```
+
+It's possible to enable or disable the input formatting by passing a boolean value to the directive
+
+```HTML
+<!-- Format as if using v-rut without a value -->
+<input type="text" name="user[rut]" v-rut="true">
+
+<!-- Don't format -->
+<input type="text" name="user[rut]" v-rut="false">
+```
