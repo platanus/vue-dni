@@ -24,24 +24,26 @@ export function rutFilter(value) {
 
 export const rutInputDirective = {
   bind(el, binding) {
-    const inputEvent = (binding.arg === 'live') ? ['blur', 'keyup'] : ['blur'];
+    if (!binding.hasOwnProperty('value') || binding.value) {
+      const inputEvent = (binding.arg === 'live') ? ['blur', 'keyup'] : ['blur'];
 
-    function formatInput(e) {
-      const oldValue = e.target.value;
-      const newValue = rutHelpers.rutFormat(e.target.value) || '';
-      if (oldValue !== newValue) {
-        const forceUpdate = createEvent('input', true);
-        e.target.value = rutHelpers.rutFormat(e.target.value) || '';
-        el.dispatchEvent(forceUpdate);
+      function formatInput(e) {
+        const oldValue = e.target.value;
+        const newValue = rutHelpers.rutFormat(e.target.value) || '';
+        if (oldValue !== newValue) {
+          const forceUpdate = createEvent('input', true);
+          e.target.value = rutHelpers.rutFormat(e.target.value) || '';
+          el.dispatchEvent(forceUpdate);
+        }
       }
+
+      inputEvent.forEach(event => {
+        el.addEventListener(event, formatInput);
+      });
+
+      el.addEventListener('focus', (e) => {
+        e.target.value = rutHelpers.rutClean(e.target.value) || '';
+      });
     }
-
-    inputEvent.forEach(event => {
-      el.addEventListener(event, formatInput);
-    });
-
-    el.addEventListener('focus', (e) => {
-      e.target.value = rutHelpers.rutClean(e.target.value) || '';
-    });
   },
 };
