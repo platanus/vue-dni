@@ -18,6 +18,28 @@ describe('Rut Input Directive', () => {
     expect(nativeInput.value).toBe('7.618.285-K');
   });
 
+  it('should format RUT on blur if directive is set to true', () => {
+    vm = new Vue({
+      template: '<div><input v-rut="true" name="rut" type="text"></div>',
+    }).$mount();
+
+    const nativeInput = vm.$el.querySelector('input');
+    nativeInput.value = '7618285K';
+    nativeInput.dispatchEvent(new Event('blur'));
+    expect(nativeInput.value).toBe('7.618.285-K');
+  });
+
+  it('shouldn\'t format RUT on blur if directive is set to false', () => {
+    vm = new Vue({
+      template: '<div><input v-rut="false" name="rut" type="text"></div>',
+    }).$mount();
+
+    const nativeInput = vm.$el.querySelector('input');
+    nativeInput.value = '7618285K';
+    nativeInput.dispatchEvent(new Event('blur'));
+    expect(nativeInput.value).toBe('7618285K');
+  });
+
   it('shouldn\'t format RUT on keyup by default', () => {
     vm = new Vue({
       template: '<div><input v-rut name="rut" type="text"></div>',
